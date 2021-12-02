@@ -4,6 +4,7 @@
 #include <mpi.h>
 #include <cstdlib>
 #include <algorithm>
+#include <thread>
 #include "inc/Core/Common/DistanceUtils.h"
 #include "inc/Core/Common/Dataset.h"
 #include "inc/Core/Common/BKTree.h"
