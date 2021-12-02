@@ -1,7 +1,7 @@
 #!/bin/bash
 export TIME=$(date '+%Y%m%d%H%M')
 if [ $# == 2 ]; then
-  if [ $1 = "sift" ]; then
+  if [ $1 = "sift1M" ]; then
     if [ $2 = "kdt" ]; then
       # Search Sift1M_KDT
       ./indexsearcher -d 128 -v float -f XVEC \
@@ -21,7 +21,7 @@ if [ $# == 2 ]; then
     else
       echo "ERROR: Wrong method!"
     fi
-  elif [ $1 = "gist" ]; then
+  elif [ $1 = "gist1M" ]; then
     if [ $2 = "kdt" ]; then
       # Search Gist1M_KDT
       ./indexsearcher -d 960 -v float -f XVEC \
@@ -78,5 +78,5 @@ elif [ $1 = "all" ]; then
   #  -m 12 -k 400 -b 1
 else
   echo "Usage: ./run.sh [dataset] [graph]"
-  echo "e.g. ./run.sh sift kdt"
+  echo "e.g. ./run.sh sift1M kdt"
 fi
